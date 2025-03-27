@@ -1,0 +1,66 @@
+/* change color of the font */
+body {
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.profil {
+    display: block;
+    /* size of picture */
+    width: 100px;
+    /* make the picture round */
+    border-radius: 10px;
+    /* centered image */
+    margin: 10px auto;
+    /*add a boder*/
+    border: 2px solid #333;
+}   
+/* style for title */
+h2 {
+    color: black;
+    font-size: 36px;
+}
+/* style for paragraphe */
+p {
+    color: rosybrown;
+    font-size: 20px;
+}         
+/* style for products */
+.products {
+    text-align: center;
+    margin-top: 20px;
+}
+.product1 {
+    margin-bottom: 20px;
+}
+.profil {
+    width: 80px;
+    height: auto;
+    border-radius: 10px;
+}
+.buy-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor:  pointer;
+}
+.pay-now-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.safaricomPaymentForm {
+    display: none;
+    background: #fff;
+    margin:  20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+    max-width: 400px;
+}

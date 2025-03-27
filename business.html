@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Our business</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <hi>Our products</hi>
+        <div class="products">
+            <h2>shoes</h2>
+            <img src="DSMS3318.JPG" alt="picture of profil" class="profil">
+            <p>Price: 50$</p>
+            <button class="buy-button" id="buy-button">buy now</button>
+            <img src="WhatsApp Image 2025-02-26 at 14.39.50 (1).jpeg" alt="picture of profil" class="profil">
+            <p>Price: 30$</p>
+            <button class="buy-button" onclick="showPaymentOptions(30)">buy now</button>
+            <img src="WhatsApp Image 2025-02-26 at 14.39.50.jpeg" alt="picture of profil" class="profil">
+            <p>Price: 40$</p>
+            <button class="buy-button" onclick="showPaymentOptions(40)">buy now</button>
+            <h3>the pants</h3>
+            <img src="WhatsApp Image 2025-02-26 at 14.39.51.jpeg" alt="picture of profile" class="profil">
+            <p>Price: 10$</p>
+            <button class="buy-button" onclick="showPaymentOptions(10)">buy now</button>
+        </div>
+
+        <!-- Hidden payment section  -->
+        <div id="paymentSection" style="display: none;">
+            <h3>select payment method</h3>
+            <p>Price: <span id="selectedPrice"></span>$</p>
+
+            <label class="payment-option">
+                <input type="radio" name="payment" value="bank"> bank transfer
+            </label>
+            
+            <label class="payment-option">
+                <input type="radio" name="payment" value="Airtel"> Airtel money
+            </label>
+            
+            <label class="payment-option">
+                <input type="radio" name="payment" value="safaricom"> safaricom (m-pesa)
+            </label>
+            <button onclick="confirmPayment()">Proceed to pay</button>
+        
+
+         </div>
+         <h4>safaricom payment (lipa na m-pesa)</h4>
+        
+        <form id="safaricomPaymentform">
+            <label for="phone">Seller's phone number:</label>
+            <input type="text" id="phone" name="phone" placeholder="e.g., +254712345678" required>
+
+            <label for="amount">amount to pay:</label>
+            <input type="text" id="amount" name="amount" placeholder="e.g., 50" required>
+
+            <button type="submit">confirm payment</button>
+            </form>
+        <p><a href="index.html">Back to home</a>
+        
+        <script src="script.js" defer></script>    
+
+     <body>
+<html>
+        
