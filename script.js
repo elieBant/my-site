@@ -1,5 +1,5 @@
 document.getElementById("buynow").addEventListener("click", () => {
-    document.getElementById("paymentSection").style.display = "block";
+document.getElementById("paymentSection").style.display = "block";
 });
 
 // fuction section of payment 
@@ -8,24 +8,31 @@ function showPaymentOption(price) {
     document.getElementById('paymentSection').style.display = 'block';
 }
 
-// 
+function cofirmPayment () {
+    let selectedPayment = document.querySelector('input[name="payment"):checked');
+    let price = document.getElementById("selectedPrice").innerText;
 
-document.getElementById("payNow").addEventListener("click", () => {
-    const selectedPayment = document.querySelector('input[name="payment"]:checked');
-
-    if (selectedPayment && selectedPayment.value == "safaricom") {
-        document.getElementById("paymentSection").style.display = "none";
-        document.getElementById("safaricompaymentform").style.display = "block";
-    } else if (selectedPayment) {
-        alert("payment method selected: " + selectedPayment.value);
-    } else {
-        alert("please select a payment method.");
+    if (!selectedPayment) {
+        alert("please select a payment method!");
+        return;
     }
-});
 
-document.getElementById("safaricompaymentform").addEventListener("submit", (e) => {
-    e.preventDefault();
-    const phone = document.getElementById("phone").value;
-    const amount = document.getElementById("amount").value;
-    alert(`payment of $${amount} for phone number ${phone} confirmed!`);
-});
+    let paymentMethod = selectedPayment.value;
+    let paymentLink = "";
+
+    // Define the link of all method payment 
+    if (paymentMethod == "bank") {
+        paymentLink = "https://www.yourbank.com/payment?amount=" + price;
+    } else if (paymentMethod == "Airtel"){
+        paymentLink == "https://www.airtelmoney.com/pay?amount=" + price;
+    } else if (paymentMethod == "safaricom") {
+        paymentLink = "https://www.safaricom.com/mpesa?amount=" + price;
+    }
+    
+    if (paymentLink) {
+        window.location.href = paymentLink;
+    }  else {
+        alert("Payment method not supported!");
+    }
+
+}
